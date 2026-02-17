@@ -34,7 +34,7 @@ export function Footer() {
               <ul className="mt-3 flex flex-col gap-2">
                 {FOOTER_LINKS.map(({ href, label }) => (
                   <li key={href}>
-                    <Link href={href} className="text-sm text-zinc-400 transition-colors hover:text-white">
+                    <Link href={href} className="inline-flex min-h-[44px] min-w-[44px] items-center text-sm text-zinc-400 transition-colors hover:text-white">
                       {label}
                     </Link>
                   </li>
@@ -50,7 +50,7 @@ export function Footer() {
                       href={href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex size-10 items-center justify-center rounded-full border border-zinc-700/50 text-xs font-medium text-zinc-400 transition-all hover:border-white hover:text-white"
+                      className="inline-flex size-11 min-h-[44px] min-w-[44px] items-center justify-center rounded-full border border-zinc-700/50 text-xs font-medium text-zinc-400 transition-all hover:border-white hover:text-white"
                       aria-label={label}
                     >
                       {icon}

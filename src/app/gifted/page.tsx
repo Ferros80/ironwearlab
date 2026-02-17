@@ -32,6 +32,7 @@ export default async function GiftedPage() {
                 alt={artist.name}
                 width={400}
                 height={400}
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 className="object-cover transition-transform hover:scale-105"
               />
             </div>

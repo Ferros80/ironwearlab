@@ -165,12 +165,12 @@ export function CustomRequestForm() {
         <span className="block text-sm font-medium text-zinc-300">Tecniche *</span>
         <div className="mt-2 flex flex-wrap gap-3">
           {TECHNIQUES.map((t) => (
-            <label key={t.value} className="flex cursor-pointer items-center gap-2">
+            <label key={t.value} className="flex min-h-[44px] min-w-[44px] cursor-pointer items-center gap-3 rounded-lg py-2">
               <input
                 type="checkbox"
                 name="techniques"
                 value={t.value}
-                className="rounded border-zinc-600 bg-zinc-900 text-white focus:ring-white"
+                className="size-5 shrink-0 rounded border-zinc-600 bg-zinc-900 text-white focus:ring-white"
               />
               <span className="text-sm text-zinc-300">{t.label}</span>
             </label>
@@ -268,13 +268,13 @@ export function CustomRequestForm() {
         <span className="block text-sm font-medium text-zinc-300">Consegna *</span>
         <div className="mt-2 flex gap-4">
           {DELIVERY_OPTIONS.map((d) => (
-            <label key={d.value} className="flex cursor-pointer items-center gap-2">
+            <label key={d.value} className="flex min-h-[44px] cursor-pointer items-center gap-3 rounded-lg py-2">
               <input
                 type="radio"
                 name="delivery"
                 value={d.value}
                 required
-                className="border-zinc-600 bg-zinc-900 text-white focus:ring-white"
+                className="size-5 shrink-0 border-zinc-600 bg-zinc-900 text-white focus:ring-white"
               />
               <span className="text-sm text-zinc-300">{d.label}</span>
             </label>
@@ -354,7 +354,7 @@ export function CustomRequestForm() {
       <button
         type="submit"
         disabled={status === "loading"}
-        className="w-full rounded-full bg-white py-4 font-semibold text-zinc-950 transition-all hover:scale-[1.02] disabled:scale-100 disabled:opacity-70"
+        className="w-full min-h-[44px] rounded-full bg-white py-4 font-semibold text-zinc-950 transition-all hover:scale-[1.02] disabled:scale-100 disabled:opacity-70"
       >
         {status === "loading" ? "Invio in corso..." : "Invia richiesta"}
       </button>

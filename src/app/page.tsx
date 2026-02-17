@@ -6,12 +6,13 @@ export default function Home() {
     <div>
       <section className="relative flex min-h-screen flex-col items-center justify-center px-4 text-center">
       <Image
-  src="/images/hero-bg.jpg"
-  alt="Iron Wear Lab"
-  fill
-  priority
-  className="absolute inset-0 -z-10 object-cover object-[72%_18%] blur-[1px] brightness-65 contrast-110 scale-105"
-/>
+        src="/images/hero-bg.jpg"
+        alt="Iron Wear Lab"
+        fill
+        priority
+        sizes="100vw"
+        className="absolute inset-0 -z-10 object-cover object-[72%_18%] blur-[1px] brightness-65 contrast-110 scale-105"
+      />
 
         <div className="absolute inset-0 -z-10 bg-gradient-to-b from-black/60 via-black/70 to-black" />
         <h1 className="font-[family-name:var(--font-bebas)] text-6xl tracking-wider text-white md:text-8xl lg:text-9xl">
@@ -23,7 +24,7 @@ export default function Home() {
         </p>
         <Link
           href="/custom-request"
-          className="animate-fade-in-delay-2 mt-10 inline-flex animate-fade-in items-center gap-2 rounded-full bg-white px-8 py-4 text-base font-semibold text-zinc-950 transition-transform hover:scale-105 active:scale-100"
+          className="animate-fade-in-delay-2 mt-10 inline-flex min-h-[44px] min-w-[44px] animate-fade-in items-center justify-center gap-2 rounded-full bg-white px-8 py-4 text-base font-semibold text-zinc-950 transition-transform hover:scale-105 active:scale-100"
         >
           Richiedi custom
         </Link>
@@ -71,7 +72,7 @@ export default function Home() {
           </p>
           <Link
             href="/gallery"
-            className="mt-6 inline-block border-b border-white pb-1 text-sm font-medium text-white transition-opacity hover:opacity-80"
+            className="mt-6 inline-flex min-h-[44px] min-w-[44px] items-center justify-center border-b border-white pb-1 text-sm font-medium text-white transition-opacity hover:opacity-80"
           >
             Esplora →
           </Link>

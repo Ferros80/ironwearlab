@@ -34,6 +34,7 @@ export default async function GalleryPage() {
                     alt={item.title}
                     width={400}
                     height={400}
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     className="object-cover opacity-80 transition-transform group-hover:scale-105"
                   />
                   <span className="absolute right-4 top-4 rounded bg-black/60 px-2 py-1 text-xs font-medium">
@@ -46,6 +47,7 @@ export default async function GalleryPage() {
                   alt={item.title}
                   width={400}
                   height={400}
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   className="object-cover transition-transform group-hover:scale-105"
                 />
               ) : null}

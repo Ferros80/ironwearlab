@@ -26,7 +26,7 @@ export default function ContactPage() {
           </p>
           <Link
             href="/custom-request"
-            className="mt-4 inline-block rounded-full bg-white px-6 py-2.5 text-sm font-semibold text-zinc-950 transition-transform hover:scale-105"
+            className="mt-4 inline-flex min-h-[44px] min-w-[44px] items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-semibold text-zinc-950 transition-transform hover:scale-105"
           >
             Vai al form
           </Link>
