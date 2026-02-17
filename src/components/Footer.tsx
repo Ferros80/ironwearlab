@@ -1,9 +1,16 @@
 import Link from "next/link";
 
 const SOCIAL = [
-  { href: "https://instagram.com", label: "Instagram", icon: "IG" },
-  { href: "https://tiktok.com", label: "TikTok", icon: "TT" },
-  { href: "https://twitter.com", label: "X", icon: "X" },
+  {
+    href: "https://www.instagram.com/ironwearlab/",
+    label: "Instagram",
+    icon: "IG",
+  },
+  {
+    href: "https://www.tiktok.com/@ironwearlab1",
+    label: "TikTok",
+    icon: "TT",
+  },
 ];
 
 const FOOTER_LINKS = [
@@ -19,51 +26,60 @@ export function Footer() {
     <footer className="border-t border-zinc-800/50 bg-zinc-950">
       <div className="mx-auto max-w-6xl px-4 py-12 md:px-6">
         <div className="flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
+          {/* Brand */}
           <div>
             <Link href="/" className="text-lg font-bold text-white">
-              Custom Hats & Apparel
+              Custom Hats &amp; Apparel
             </Link>
             <p className="mt-2 max-w-xs text-sm text-zinc-500">
               Cappellini New Era e accessori personalizzati con strass, patch e ricami.
             </p>
           </div>
 
-          <div className="flex flex-col gap-6 md:flex-row md:gap-12">
-            <div>
-              <h3 className="text-xs font-semibold uppercase tracking-wider text-zinc-500">Link</h3>
-              <ul className="mt-3 flex flex-col gap-2">
-                {FOOTER_LINKS.map(({ href, label }) => (
-                  <li key={href}>
-                    <Link href={href} className="inline-flex min-h-[44px] min-w-[44px] items-center text-sm text-zinc-400 transition-colors hover:text-white">
-                      {label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-xs font-semibold uppercase tracking-wider text-zinc-500">Social</h3>
-              <ul className="mt-3 flex gap-4">
-                {SOCIAL.map(({ href, label, icon }) => (
-                  <li key={href}>
-                    <a
-                      href={href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex size-11 min-h-[44px] min-w-[44px] items-center justify-center rounded-full border border-zinc-700/50 text-xs font-medium text-zinc-400 transition-all hover:border-white hover:text-white"
-                      aria-label={label}
-                    >
-                      {icon}
-                    </a>
-                  </li>
-                ))}
-              </ul>
+          {/* Links */}
+          <div>
+            <p className="text-xs font-semibold tracking-widest text-zinc-500">
+              LINK
+            </p>
+            <ul className="mt-4 space-y-4">
+              {FOOTER_LINKS.map((l) => (
+                <li key={l.href}>
+                  <Link
+                    href={l.href}
+                    className="text-sm text-zinc-300 hover:text-white"
+                  >
+                    {l.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Social */}
+          <div>
+            <p className="text-xs font-semibold tracking-widest text-zinc-500">
+              SOCIAL
+            </p>
+            <div className="mt-4 flex gap-3">
+              {SOCIAL.map((s) => (
+                <a
+                  key={s.label}
+                  href={s.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={s.label}
+                  className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-zinc-700/60 text-xs font-semibold text-zinc-200 hover:border-zinc-500 hover:text-white"
+                >
+                  {s.icon}
+                </a>
+              ))}
             </div>
           </div>
         </div>
-        <p className="mt-12 text-center text-xs text-zinc-600">
-          © {new Date().getFullYear()} Custom Hats. Tutti i diritti riservati.
-        </p>
+
+        <div className="mt-10 border-t border-zinc-800/50 pt-6 text-xs text-zinc-600">
+          © {new Date().getFullYear()} Iron Wear Lab. All rights reserved.
+        </div>
       </div>
     </footer>
   );

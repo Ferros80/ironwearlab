@@ -14,37 +14,61 @@ export default function ContactPage() {
           CONTACT
         </h1>
         <p className="mt-4 text-zinc-400">
-          Per richieste custom usa il form dedicato.
+          Per richieste custom usa il form dedicato. Per info generali puoi scriverci via email.
         </p>
       </header>
 
       <div className="space-y-8">
-        <div className="rounded-2xl border border-zinc-800/50 bg-zinc-900/30 p-6">
-          <h2 className="font-semibold text-white">Richiedi una personalizzazione</h2>
-          <p className="mt-2 text-zinc-400">
-            Compila il form con tutti i dettagli: base cappellino, colore, tecniche, budget. Ti rispondo al più presto.
-          </p>
-          <Link
-            href="/custom-request"
-            className="mt-4 inline-flex min-h-[44px] min-w-[44px] items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-semibold text-zinc-950 transition-transform hover:scale-105"
-          >
-            Vai al form
-          </Link>
+        {/* Custom request */}
+        <div className="rounded-2xl border border-zinc-800/50 bg-zinc-900/30 p-6 shadow-lg">
+          <div className="flex flex-col gap-3">
+            <h2 className="text-lg font-semibold text-white">Richiedi una personalizzazione</h2>
+            <p className="text-zinc-400">
+              Compila il form con tutti i dettagli: base cappellino, colore, tecniche e budget.
+              Ti rispondiamo al più presto.
+            </p>
+          </div>
+
+          <div className="mt-6">
+            <Link
+              href="/custom-request"
+              className="inline-flex min-h-[44px] items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-semibold text-zinc-950 transition-transform hover:scale-105"
+            >
+              Vai al form
+            </Link>
+          </div>
         </div>
 
-        <div className="rounded-2xl border border-zinc-800/50 bg-zinc-900/30 p-6">
-          <h2 className="font-semibold text-white">Social</h2>
+        {/* Email */}
+        <div className="rounded-2xl border border-zinc-800/50 bg-zinc-900/30 p-6 shadow-lg">
+          <h2 className="text-lg font-semibold text-white">Email</h2>
           <p className="mt-2 text-zinc-400">
-            Seguimi su Instagram per vedere gli ultimi lavori e le novità.
+            Per info generali, richieste e collaborazioni: scrivici qui.
           </p>
-          <a
-            href="https://instagram.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-4 inline-block text-sm font-medium text-white underline underline-offset-4 hover:opacity-80"
-          >
-            @customhats
-          </a>
+
+          <div className="mt-5 space-y-4">
+            <div className="rounded-xl border border-white/10 bg-white/5 p-4">
+              <p className="text-xs uppercase tracking-wide text-zinc-500">Info generali</p>
+              <a
+                href="mailto:info@ironwearlab.com"
+                className="mt-2 inline-flex text-sm font-medium text-white underline underline-offset-4 hover:opacity-80"
+              >
+                info@ironwearlab.com
+              </a>
+            </div>
+
+            <div className="rounded-xl border border-white/10 bg-white/5 p-4">
+              <p className="text-xs uppercase tracking-wide text-zinc-500">Business / Collaborazioni</p>
+              <a
+                href="mailto:ferro@ironwearlab.com"
+                className="mt-2 inline-flex text-sm font-medium text-white underline underline-offset-4 hover:opacity-80"
+              >
+                ferro@ironwearlab.com
+              </a>
+            </div>
+          </div>
+
+          <p className="mt-5 text-xs text-zinc-500">Tempo di risposta tipico: 24–48h.</p>
         </div>
       </div>
     </div>
