@@ -19,7 +19,7 @@ export function AdminShell({ children, role }: AdminShellProps) {
   return (
     <div className="flex min-h-screen bg-zinc-950">
       <Sidebar role={role} />
-      <main className="ml-56 flex-1 p-6">{children}</main>
+      <main className="flex-1 p-4 pt-16 md:ml-56 md:p-6 md:pt-6">{children}</main>
     </div>
   );
 }

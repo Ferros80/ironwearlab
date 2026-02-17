@@ -9,11 +9,11 @@ export default async function AdminGalleryPage() {
 
   return (
     <div>
-      <div className="flex items-center justify-between">
-        <h1 className="text-2xl font-bold text-white">Gallery</h1>
+      <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+        <h1 className="text-xl font-bold text-white sm:text-2xl">Gallery</h1>
         <Link
           href="/admin/gallery/new"
-          className="rounded-lg bg-white px-4 py-2 text-sm font-semibold text-zinc-950"
+          className="inline-flex min-h-[44px] w-fit items-center rounded-lg bg-white px-4 py-2 text-sm font-semibold text-zinc-950"
         >
           + Nuovo
         </Link>

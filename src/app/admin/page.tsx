@@ -17,8 +17,8 @@ export default async function AdminDashboard() {
 
   return (
     <div>
-      <h1 className="text-2xl font-bold text-white">Dashboard</h1>
-      <p className="mt-1 text-zinc-400">Panoramica del backoffice</p>
+      <h1 className="text-xl font-bold text-white sm:text-2xl">Dashboard</h1>
+      <p className="mt-1 text-sm text-zinc-400">Panoramica del backoffice</p>
       <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         <Link
           href="/admin/gallery"

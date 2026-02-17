@@ -62,6 +62,15 @@ body {
   animation: drawer-slide-in 0.3s ease-out forwards;
 }
 
+@keyframes drawer-slide-in-left {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
+}
+
+.animate-drawer-slide-left {
+  animation: drawer-slide-in-left 0.3s ease-out forwards;
+}
+
 /* Safe area for iPhone notch/home indicator */
 .safe-area-bottom {
   padding-bottom: max(0.5rem, env(safe-area-inset-bottom));
